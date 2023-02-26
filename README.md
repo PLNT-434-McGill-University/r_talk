@@ -1,2 +1,2 @@
 # r_talk
-R talk to undergraduated students
+Basic R talk to undergraduated students
