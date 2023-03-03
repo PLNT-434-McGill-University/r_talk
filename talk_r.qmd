@@ -1,0 +1,165 @@
+---
+title: "Introduction to R"
+author: "Maxwel C Oliveira"
+institute: "Department of Plant Science <br>McGill University"
+format:
+  revealjs: 
+    theme: serif
+editor: source
+show-slide-number: all
+from: markdown+emoji
+highlight-style: a11y
+height: 1080
+width: 1920
+---
+
+
+## R and RStudio
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+```{r echo=FALSE, out.width="25%"}
+knitr::include_graphics("img/r-logo.png")
+```
+
+- R is an open-source statistical **programming language**
+- R is also an environment for statistical computing and graphics
+- It's easily extensible with *packages*
+
+
+
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("img/rstudio-logo.png")
+```
+
+- RStudio is a convenient interface for R called an **IDE** (integrated development environment), e.g. *"I write R code in the RStudio IDE"*
+- RStudio is not a requirement for programming with R, but it's very commonly used by R programmers and data scientists
+
+:::
+
+::::
+
+
+## R packages
+
+- **Packages** are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup>
+
+- As of September 2020, there are over 16,000 R packages available on **CRAN** (the Comprehensive R Archive Network)<sup>2</sup>
+
+- We're going to work with a small (but important) subset of these!
+
+::: aside
+<sup>1</sup> Wickham and Bryan, [R Packages](https://r-pkgs.org/).
+
+<sup>2</sup> [CRAN contributed packages](https://cran.r-project.org/web/packages/).
+:::
+
+
+## Tour: R and RStudio
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics("img/tour-r-rstudio.png")
+```
+
+
+## A short list (for now) of R essentials
+
+- Functions are (most often) verbs, followed by what they will be applied to in parentheses:
+
+```python
+do_this(to_this)
+do_that(to_this, to_that, with_those)
+```
+
+--
+
+- Packages are installed with the `install.packages` function and loaded with the `library` function, once per session:
+
+```python
+install.packages("package_name")
+library(package_name)
+```
+
+
+## R essentials (continued)
+
+- Columns (variables) in data frames are accessed with `$`:
+
+
+```python
+dataframe$var_name
+```
+
+
+
+
+- Object documentation can be accessed with `?`
+
+```python
+?mean
+```
+
+
+## tidyverse
+
+:::: {.columns}
+
+::: {.column width="45%"}
+```{r echo=FALSE, out.width="99%"}
+knitr::include_graphics("img/tidyverse.png")
+```
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+
+[tidyverse.org](https://www.tidyverse.org/)
+
+
+- The **tidyverse** is an opinionated collection of R packages designed for data science
+- All packages share an underlying philosophy and a common grammar
+
+
+:::
+::::
+
+
+## rmarkdown
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+[rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/)
+
+
+- **rmarkdown** and the various packages that support it enable R users to write their code and prose in reproducible computational documents
+- We will generally refer to R Markdown documents (with `.Rmd` extension), e.g. *"Do this in your R Markdown document"* and rarely discuss loading the rmarkdown package
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+
+::: {.column width="45%"}
+
+```{r echo=FALSE, out.width="60%"}
+knitr::include_graphics("img/rmarkdown.png")
+```
+
+:::
+::::
