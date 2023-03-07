@@ -1,0 +1,80 @@
+---
+title: "Babynames"
+format: html
+editor: visual
+---
+
+```{r}
+#| message: false
+#| warning: false
+```
+
+
+# Make a figure with your name
+
+
+## Run the codes
+
+
+```{r}
+library(babynames) # babynames dataset
+library(dplyr) # data manipulation
+library(ggplot2) # high quality graphs
+```
+
+
+```{r}
+glimpse(babynames) #dplyr
+```
+
+```{r}
+head(babynames) # base R
+```
+
+
+```{r}
+tail(babynames) # same
+```
+
+
+## New dataset **maxwel**
+
+```{r}
+maxwel <- babynames %>%
+  filter(name == "Maxwel" | name == "Maxwell") %>% # variants of name
+  filter(sex == "M") # sex F or M
+```
+
+
+```{r}
+maxwel
+```
+
+
+```{r}
+glimpse(maxwel)
+```
+
+## Graph
+
+```{r}
+plot <- ggplot(maxwel, 
+               aes(x = year, 
+                   y = prop, 
+                   group = name, 
+                   color = name)) + 
+  geom_line()  
+```
+
+
+```{r}
+plot
+```
+
+## Save the figure
+
+```{r}
+ggsave("maxwel_oliveira.png", plot)
+```
+
+
