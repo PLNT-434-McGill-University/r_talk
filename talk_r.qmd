@@ -411,7 +411,7 @@ ggplot(data = penguins,
 
 - [R Ladies - https://www.rladies.org/](https://www.rladies.org/)
 
-
+- Slides and exercise based on [Data Science in a Box](https://datasciencebox.org/)
 
 
 
