@@ -1,5 +1,5 @@
 ---
-title: "Introduction to R"
+title: "Introduction to R and RStudio"
 author: "Maxwel C Oliveira"
 institute: "Department of Plant Science <br>McGill University"
 format:
@@ -13,8 +13,29 @@ height: 1080
 width: 1920
 ---
 
+## Outline
+
+::: {.incremental}
+
+- What is R and RStudio
+
+- R packages
+
+- Rmarkdown and Quarto
+
+- tidyverse and ggplot
+:::
+
+## Exercise - `babynames`
+
+- This package contains three datasets provided by the USA social security administration
+
+- `babynames`: For each year from 1880 to 2017, the number of children of each sex given each name. All names with more than 5 uses are given.
+
 
 ## R and RStudio
+
+
 
 :::: {.columns}
 
@@ -28,14 +49,12 @@ knitr::include_graphics("img/r-logo.png")
 - R is also an environment for statistical computing and graphics
 - It's easily extensible with *packages*
 
-
-
-
 :::
 
 ::: {.column width="10%"}
 <!-- empty column to create gap -->
 :::
+
 
 ::: {.column width="45%"}
 
@@ -47,30 +66,29 @@ knitr::include_graphics("img/rstudio-logo.png")
 - RStudio is not a requirement for programming with R, but it's very commonly used by R programmers and data scientists
 
 :::
-
 ::::
 
 
 ## R packages
 
-- **Packages** are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup>
+::: {.incremental}
 
-- As of September 2020, there are over 16,000 R packages available on **CRAN** (the Comprehensive R Archive Network)<sup>2</sup>
+- **Packages** are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data^[Wickham and Bryan, [R Packages](https://r-pkgs.org/)]
+
+- As of September 2020, there are over 16,000 R packages available on **CRAN** (the Comprehensive R Archive Network)^[[CRAN contributed packages](https://cran.r-project.org/web/packages/)]
 
 - We're going to work with a small (but important) subset of these!
-
-::: aside
-<sup>1</sup> Wickham and Bryan, [R Packages](https://r-pkgs.org/).
-
-<sup>2</sup> [CRAN contributed packages](https://cran.r-project.org/web/packages/).
 :::
 
+::: {.fragment}
+
+[![](img/rpackages.jpeg){fig-align="center" width=600px fig-alt="R packages"}]()
+
+:::
 
 ## Tour: R and RStudio
 
-```{r echo=FALSE, out.width="80%"}
-knitr::include_graphics("img/tour-r-rstudio.png")
-```
+[![](img/tour-r-rstudio.png){fig-align="center" width=900px fig-alt="R and RStudio tour"}]()
 
 
 ## A short list (for now) of R essentials
@@ -81,8 +99,6 @@ knitr::include_graphics("img/tour-r-rstudio.png")
 do_this(to_this)
 do_that(to_this, to_that, with_those)
 ```
-
---
 
 - Packages are installed with the `install.packages` function and loaded with the `library` function, once per session:
 
@@ -137,8 +153,40 @@ knitr::include_graphics("img/tidyverse.png")
 :::
 ::::
 
+# R Markdown and Quarto
 
-## rmarkdown
+[![](img/render.png){fig-align="center" height=800px fig-alt="Quarto and Rmarkdownlogo"}]()
+
+
+::: aside
+Art: Allison Horst
+:::
+
+## R Markdown and Quarto
+
+::: {.incremental}
+
+- Fully reproducible reports -- each time you render/knit the analysis is ran from the beginning
+
+- Simple markdown syntax for text
+
+- Code goes in chunks, defined by three backticks, narrative goes outside of chunks
+:::
+
+::: {.fragment}
+
+[![](img/quarto_rmardown.png){fig-align="center" width=800px fig-alt="R packages"}]()
+
+:::
+
+## Markdown Basics
+
+[Markdown basics - https://quarto.org/docs/authoring/markdown-basics.html](https://quarto.org/docs/authoring/markdown-basics.html)
+
+[![](img/markdown_basics.png){fig-align="center" width=800px fig-alt="Markdown basics"}]()
+
+
+## Rmarkdown
 
 :::: {.columns}
 
@@ -147,8 +195,8 @@ knitr::include_graphics("img/tidyverse.png")
 [rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/)
 
 
-- **rmarkdown** and the various packages that support it enable R users to write their code and prose in reproducible computational documents
-- We will generally refer to R Markdown documents (with `.Rmd` extension), e.g. *"Do this in your R Markdown document"* and rarely discuss loading the rmarkdown package
+- **Rmarkdown** and the various packages that support it enable R users to write their code and prose in reproducible computational documents
+
 :::
 
 ::: {.column width="10%"}
@@ -164,3 +212,206 @@ knitr::include_graphics("img/rmarkdown.png")
 
 :::
 ::::
+
+
+## Tour Rmarkdown
+
+[![](img/tour-rmarkdown.png){fig-align="center" width=400px fig-alt="Quarto and Rmarkdownlogo"}]()
+
+
+
+
+
+## quarto
+
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+
+[![](img/quarto.png){fig-align="center" width=800px fig-alt="Quarto logo"}]()
+
+
+:::
+
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+
+::: {.column width="45%"}
+
+
+[quarto.org](https://quarto.org/)
+
+- Create dynamic content with **Python**, **R**, **Julia**, and **Observable**
+- Author documents as plain text markdown or Jupyter notebooks
+- Publish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.
+- Author with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
+:::
+
+
+::::
+
+## Tour Rmarkdown
+
+[![](img/tour-quarto.png){fig-align="center" width=800px fig-alt="Tour quarto"}]()
+
+
+# ggplot2
+
+[![](img/ggplot_al.png){fig-align="center" width=1000px fig-alt="ggplot"}]()
+
+::: aside
+Art: Allison Horst
+:::
+
+
+## ggplot2
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+- **ggplot2** is tidyverse's data visualization package
+
+- **gg** in `ggplot2` stands for Grammar of Graphics
+
+- Inspired by the book Grammar of Graphics by Leland Wilkinson
+
+:::
+
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+
+::: {.column width="45%"}
+
+[![](img/ggplot.png){fig-align="center" width=400px fig-alt="ggplot logo"}]()
+
+:::
+
+::::
+
+## Grammar of Graphics
+
+A grammar of graphics is a tool that enables us to concisely describe the components of a graphic
+
+
+[![](img/grammar-of-graphics.png){fig-align="right" width=400px fig-alt="ggplot logo"}]()
+
+## Mass vs. height
+
+
+```{r}
+#| echo: true
+library(tidyverse)
+ggplot(data = starwars, mapping = aes(x = height, y = mass)) +
+  geom_point() +
+  labs(title = "Mass vs. height of Starwars characters",
+       x = "Height (cm)", y = "Weight (kg)")
+```
+
+## Mass vs. height
+
+- What are the functions doing the plotting?
+- What is the dataset being plotted?
+- Which variables map to which features (aesthetics) of the plot?
+- What does the warning mean?
+
+```{r}
+#| message: false
+#| echo: true
+#| fig-show: hide
+ggplot(data = starwars, mapping = aes(x = height, y = mass)) +
+  geom_point() +
+  labs(title = "Mass vs. height of Starwars characters",
+       x = "Height (cm)", y = "Weight (kg)")
+```
+
+## ggplot2
+
+- `ggplot()` is the main function in ggplot2
+- Plots are constructed in layers
+- Structure of the code for plots can be summarized as
+
+
+```python
+ggplot(data = [dataset], 
+       mapping = aes(x = [x-variable], y = [y-variable])) +
+   geom_xxx() +
+   other options
+```
+
+## Data: Palmer Penguins
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+- Measurements for penguin species, island in Palmer Archipelago, size (flipper length, body mass, bill dimensions), and sex.
+
+[![](img/penguins.png){fig-align="center" width=600px fig-alt="Palmer penguins"}]()
+
+:::
+
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="45%"}
+```{r}
+#| echo: true
+library(palmerpenguins)
+glimpse(penguins)
+```
+
+:::
+::::
+
+## 
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r ref.label = "penguins", echo = FALSE, warning = FALSE, out.width = "70%", fig.width = 8}
+```
+
+
+
+## Code
+
+```{r penguins, fig.show = "hide"}
+#| echo: true
+
+ggplot(data = penguins, 
+       mapping = aes(x = bill_depth_mm, y = bill_length_mm,
+                     colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+       subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+       x = "Bill depth (mm)", y = "Bill length (mm)",
+       colour = "Species")
+```
+
+
+:::
+
+
+## Resources
+
+- [Bookdown - https://bookdown.org/](https://bookdown.org/)
+
+- [R for Data Science - https://r4ds.had.co.nz/](https://r4ds.had.co.nz/)
+
+- [R Ladies - https://www.rladies.org/](https://www.rladies.org/)
+
+
+
+
+
