@@ -214,7 +214,7 @@ knitr::include_graphics("img/rmarkdown.png")
 ::::
 
 
-## Tour Rmarkdown
+## Tour rmarkdown
 
 [![](img/tour-rmarkdown.png){fig-align="center" width=400px fig-alt="Quarto and Rmarkdownlogo"}]()
 
@@ -255,7 +255,7 @@ knitr::include_graphics("img/rmarkdown.png")
 
 ::::
 
-## Tour Rmarkdown
+## Tour quarto
 
 [![](img/tour-quarto.png){fig-align="center" width=800px fig-alt="Tour quarto"}]()
 
