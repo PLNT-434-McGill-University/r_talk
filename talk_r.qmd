@@ -33,6 +33,8 @@ width: 1920
 - `babynames`: For each year from 1880 to 2017, the number of children of each sex given each name. All names with more than 5 uses are given.
 
 
+
+
 ## R and RStudio
 
 
@@ -69,6 +71,12 @@ knitr::include_graphics("img/rstudio-logo.png")
 ::::
 
 
+## Data science life cycle
+
+[![](img/data-science-cycle.001.png){fig-align="center" width=700px fig-alt="Data science cycle"}]()
+
+
+
 ## R packages
 
 ::: {.incremental}
@@ -85,6 +93,9 @@ knitr::include_graphics("img/rstudio-logo.png")
 [![](img/rpackages.jpeg){fig-align="center" width=600px fig-alt="R packages"}]()
 
 :::
+
+
+
 
 ## Tour: R and RStudio
 
@@ -127,31 +138,7 @@ dataframe$var_name
 ```
 
 
-## tidyverse
 
-:::: {.columns}
-
-::: {.column width="45%"}
-```{r echo=FALSE, out.width="99%"}
-knitr::include_graphics("img/tidyverse.png")
-```
-:::
-
-::: {.column width="10%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="45%"}
-
-[tidyverse.org](https://www.tidyverse.org/)
-
-
-- The **tidyverse** is an opinionated collection of R packages designed for data science
-- All packages share an underlying philosophy and a common grammar
-
-
-:::
-::::
 
 # R Markdown and Quarto
 
@@ -252,12 +239,40 @@ knitr::include_graphics("img/rmarkdown.png")
 - Author with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
 :::
 
-
 ::::
+
+
 
 ## Tour quarto
 
 [![](img/tour-quarto.png){fig-align="center" width=800px fig-alt="Tour quarto"}]()
+
+
+## tidyverse
+
+:::: {.columns}
+
+::: {.column width="45%"}
+```{r echo=FALSE, out.width="99%"}
+knitr::include_graphics("img/tidyverse.png")
+```
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+
+[tidyverse.org](https://www.tidyverse.org/)
+
+
+- The **tidyverse** is an opinionated collection of R packages designed for data science
+- All packages share an underlying philosophy and a common grammar
+
+
+:::
+::::
 
 
 # ggplot2
