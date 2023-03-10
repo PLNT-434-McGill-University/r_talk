@@ -4,16 +4,22 @@ format: html
 editor: visual
 ---
 
+
+
 ```{r}
 #| message: false
 #| warning: false
 ```
 
-
-# Make a figure with your name
-
+# Make a figure **with** your name
 
 ## Run the codes
+
+Here is my data anal
+
+```{r}
+1 + 1
+```
 
 
 ```{r}
@@ -21,7 +27,6 @@ library(babynames) # babynames dataset
 library(dplyr) # data manipulation
 library(ggplot2) # high quality graphs
 ```
-
 
 ```{r}
 glimpse(babynames) #dplyr
@@ -31,25 +36,21 @@ glimpse(babynames) #dplyr
 head(babynames) # base R
 ```
 
-
 ```{r}
 tail(babynames) # same
 ```
-
 
 ## New dataset **maxwel**
 
 ```{r}
 maxwel <- babynames %>%
-  filter(name == "Maxwel" | name == "Maxwell") %>% # variants of name
+  filter(name == "Martina" | name == "Alex" | name == "Avery") %>% # variants of name
   filter(sex == "M") # sex F or M
 ```
-
 
 ```{r}
 maxwel
 ```
-
 
 ```{r}
 glimpse(maxwel)
@@ -66,7 +67,6 @@ plot <- ggplot(maxwel,
   geom_line()  
 ```
 
-
 ```{r}
 plot
 ```
@@ -76,5 +76,3 @@ plot
 ```{r}
 ggsave("maxwel_oliveira.png", plot)
 ```
-
-

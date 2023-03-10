@@ -5,6 +5,7 @@ institute: "Department of Plant Science <br>McGill University"
 format:
   revealjs: 
     theme: serif
+    chalkboard: true
 editor: source
 show-slide-number: all
 from: markdown+emoji
